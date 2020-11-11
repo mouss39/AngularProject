@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { NewsApiService } from '../services/news-api.service';
 
 @Component({
   selector: 'app-main-page',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  result$: Observable<any>;
+
+  constructor(private newsApiService:  NewsApiService) { 
+    this.result$=newsApiService.resolveItems();
+  }
 
   ngOnInit(): void {
   }
