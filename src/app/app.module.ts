@@ -8,13 +8,15 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { RegisterComponent } from './register/register.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PostsService } from './services/posts/posts.service';
+import { PostItemComponent } from './components/postComponent/post-item/post-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     MainPageComponent,
-    RegisterComponent
+    RegisterComponent,
+    PostItemComponent
   ],
   imports: [
     BrowserModule,

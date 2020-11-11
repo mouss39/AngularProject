@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { post } from '../models/post';
 import { PostsService } from '../services/posts/posts.service';
 
 @Component({
@@ -9,14 +10,18 @@ import { PostsService } from '../services/posts/posts.service';
 })
 export class MainPageComponent implements OnInit {
 
-  @Input()
-  result$: Observable<any>;
+  posts:post[];
 
   constructor(private postsService:  PostsService) { 
-    this.result$=postsService.resolveItems();
   }
 
   ngOnInit(): void {
+
+    this.postsService.getPosts().subscribe(posts =>{
+      this.posts=posts;
+
+    });
+       // this.result$=postsService.getPosts();
   }
 
 }

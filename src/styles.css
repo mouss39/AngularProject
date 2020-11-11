@@ -147,9 +147,9 @@ p {
   .card {
     border-radius: 4px;
     border: 1px solid #eee;
-    background-color: #fafafa;
-    height: 40px;
-    width: 200px;
+    background-color: #b6d3db;
+    height: max-content;
+    width: fit-content;
     margin: 0 8px 16px;
     padding: 16px;
     display: flex;
