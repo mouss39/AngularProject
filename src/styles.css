@@ -8,6 +8,12 @@ background-color: #d4f4f5;
 padding-top: 50px;
 padding-bottom: 50px;
 }
+.backGroundColor{
+    width: max-content;
+    height: max-content;
+    background-color: #d4f4f5  !important;
+    
+    }
 
 .title{
 align-items: center;
@@ -40,7 +46,7 @@ align-items: center;
     color: turquoise;
     border-bottom:1px solid #ccc;
     width:90%}
-    
+
 .small-input1{
         padding:10px;
         display:block;
@@ -59,8 +65,16 @@ align-items: center;
     h1 {
         text-align: center;
         text-transform: uppercase;
-        color: rgb(5, 229, 245);
+        color: rgb(24, 70, 73);
       }
+      h3{
+      
+      
+        color: rgb(24, 70, 73);
+
+      }
+
+
 
 .round-large{border-radius:8px}
 

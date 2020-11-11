@@ -1,0 +1,21 @@
+
+.infoDiv{
+
+    float: left;
+    padding: 50px 50px 50px 40px;
+    background-color: #d4f4f5;
+    }
+.loginDiv{
+        float: right;
+        background-color: #d4f4f5;
+    }
+
+    .centerLogin {
+        margin: auto;
+      
+        border: 3px solid rgb(5, 229, 245);
+        padding: 20px 10px 10px 10px ;
+      }
+
+
+

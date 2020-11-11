@@ -1,10 +1,15 @@
-<div class="mainDiv">  
-<div class="infoDiv">
+  
 
-   
-    <div class="padding-20">
+
+<div class="backGroundColor">
+    
+<div class="infoDiv center padding">
+
+
         <h1>Welcome!</h1>
-    <h3>  This is an example project that contains  the main application properties that could be asked for in any porject like:
+    <h3>  This is an example project that contains  the main application properties </h3>
+    <h3>
+        that could be asked for in any porject like:
     </h3>
     <table>
         <tr>
@@ -33,21 +38,37 @@
 
 
       <h3> This project was developed using Angular for the web development..(Html,CSS,TypeScript) </h3>
-        <span *ngIf="true">
-            , please login using
-            <span (mouseover)="changeText=true" (mouseout)="changeText=false">
-                <span *ngIf="!changeText" class="hover-fade">admin:pass1</span>
-                <span *ngIf="changeText">admin:pass1</span>
-            </span>
-            to access the website.
-        </span>
-    </div>
+  
 
-    <div></div>
 
-</div>
-<div class="loginDiv">
 
 
 </div>
+<div class="loginDiv centerLogin ">
+
+
+
+        <h1>LogIn</h1>
+        <div class="padding">
+            <b><label class="label">Email</label></b>
+            <input id="email" class="custom-input input-border round-large padding"
+            name="email" type="email"   />
+           </div>
+
+           <div class="padding">
+            <b><label class="label">Password</label></b>
+            <input id="password" class="custom-input input-border round-large padding"
+            name="password" type="password"   />
+           </div>
+           <div class=" padding">
+            <button id ="registerButton" name="registerButton "class="customButton">Login</button>
+            </div>
+           <p>Please login using </p>
+           
+       
+        
+
+
+</div>
+
 </div>
