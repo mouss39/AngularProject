@@ -1,51 +1,61 @@
 <div class="mainDiv">
     
 
-    <div class="center padding paddingDown-10">
-     
+    <div class="center padding ">
+       
         <h1>Registration</h1>
-        <input id="firstName" class="small-input1 input-border round-large paddingDown-10"
+
+
+        <div class="padding"> 
+        <input id="firstName" class="small-input1 input-border round-large padding"
          name="firstName" type="text"  value="First Name"
-         onfocus="if (this.value == 'First Name') {this.value = '';}" onblur="if (this.value == ''){this.value = 'First Name';} " />
+         onfocus="if (this.value == 'First Name') {this.value = '';}"
+          onblur="if (this.value == ''){this.value = 'First Name';} " />
 
-        
-        
-
-       <input id="lastName" class="small-input1 input-border round-large paddingDown-10"
+       <input id="lastName" class="small-input1 input-border round-large padding"
          name="lastName" type="text"  value="Last Name"
-         onfocus="if (this.value == 'Last Name') {this.value = '';}" onblur="if (this.value == ''){this.value = 'Last Name';} " />
-         <input id="email" class="custom-input input-border round-large paddingDown-10"
+         onfocus="if (this.value == 'Last Name') {this.value = '';}"
+          onblur="if (this.value == ''){this.value = 'Last Name';} " />
+        </div>
+        <div class="padding">
+         <input id="email" class="custom-input input-border round-large padding"
          name="email" type="email"  value="Email"
-         onfocus="if (this.value == 'Email') {this.value = '';}" onblur="if (this.value == ''){this.value = 'Email';} " />
-        
+         onfocus="if (this.value == 'Email') {this.value = '';}"
+          onblur="if (this.value == ''){this.value = 'Email';} " />
+        </div>
+        <div class="padding">
          <b><label class="label">Password</label></b>
-         <input id="password" class="small-input1 input-border round-large paddingDown-10"
+         <input id="password" class="small-input1 input-border round-large padding"
          name="password" type="password"  
          />
 
          <b><label class="label"> Confirm Password</label></b>
-         <input id="confPassword" class="small-input1 input-border round-large paddingDown-10"
+         <input id="confPassword" class="small-input1 input-border round-large padding"
          name="confPassword" type="password" 
           />
+        </div>
 
-        
-          <input id="phoneNumber" class="custom-input input-border round-large paddingDown-10"
+        <div class="padding">
+          <input id="phoneNumber" class="custom-input input-border round-large padding"
          name="phoneNumber" type="tel"  value="Telephone Number"
          onfocus="if (this.value == 'Telephone Number') {this.value = '';}" onblur="if (this.value == ''){this.value = 'Telephone Number';} " />
+        </div>
+        <div class="padding">
+         <input id="age" class="small-input1 input-border round-large padding"
+         name="age" type="text"  value="Age"
+         onfocus="if (this.value == 'Age') {this.value = '';}"
+          onblur="if (this.value == ''){this.value = 'Age';} " />
+        
+         <input id="sex" class="small-input1 input-border round-large padding"
+         name="sex" type="text"  value="Sex"
+         onfocus="if (this.value == 'Sex') {this.value = '';}"
+          onblur="if (this.value == ''){this.value = 'Sex';} " />
+        </div>
         
 
-         <input id="age" class="small-input1 input-border round-large paddingDown-10"
-         name="age" type="text"  value="Age"
-         onfocus="if (this.value == 'Age') {this.value = '';}" onblur="if (this.value == ''){this.value = 'Age';} " />
-
-         <input id="sex" class="small-input1 input-border round-large paddingDown-10"
-         name="sex" type="text"  value="Sex"
-         onfocus="if (this.value == 'Sex') {this.value = '';}" onblur="if (this.value == ''){this.value = 'Sex';} " />
-
-
     </div>
-
-
-
+<div class="centerNoBorder padding">
+<button id ="registerButton" name="registerButton "class="customButton">Register</button>
+</div>
 </div>
 
