@@ -3,7 +3,26 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  loginUrl : 'http://localhost:8088/auth/login',
+  headers:{
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Access-Control-Allow-Origin': 'http://localhost:4200',
+    'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With, Set-Cookie'
+},
+
+  baseUrl : 'http://localhost:8088/',
+  usersUrl : 'http://localhost:8088/users/',
+ 
+  addresses : '/addresses',
+  pagedUsersUrl : 'http://localhost:8088/users/page/',
+  logoutUrl: 'http://localhost:8088/auth/logout',
+
+skills: '/skills',
+usernames: 'usernames'
+
 };
 
 /*

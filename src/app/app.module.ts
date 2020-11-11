@@ -9,6 +9,8 @@ import { RegisterComponent } from './register/register.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PostsService } from './services/posts/posts.service';
 import { PostItemComponent } from './components/postComponent/post-item/post-item.component';
+import { AuthService } from './services/auth/auth.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,9 +23,12 @@ import { PostItemComponent } from './components/postComponent/post-item/post-ite
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
+
   ],
-  providers: [PostsService],
+  providers: [PostsService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
