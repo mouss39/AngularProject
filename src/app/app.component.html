@@ -1,0 +1,25 @@
+
+<nav  class="toolbar" >
+
+  <div class="registerMenu">
+      <ul>
+        <li>
+            <a class="regular-btn" *ngIf="true" routerLink="/main"><span>Login</span></a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a class="regular-btn" *ngIf="true" routerLink="/"><span>Logout</span></a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a class="regular-btn" *ngIf="true" routerLink="/register"><span>Register</span></a>
+        </li>
+      </ul>
+
+  </div>
+ 
+</nav>
+<div class="paddingDown"></div>
+<router-outlet></router-outlet>
