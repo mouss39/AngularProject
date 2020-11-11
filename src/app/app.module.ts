@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { RegisterComponent } from './register/register.component';
-import { NewsApiService } from './services/news-api.service';
 import {HttpClientModule} from '@angular/common/http';
+import { PostsService } from './services/posts/posts.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [NewsApiService],
+  providers: [PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

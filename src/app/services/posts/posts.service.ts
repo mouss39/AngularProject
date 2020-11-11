@@ -5,9 +5,9 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class NewsApiService {
+export class PostsService {
 
-  private URL='http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=dc420a7de9a545ac9e44eb3b4b097f2f';
+  private URL='https://jsonplaceholder.typicode.com/posts';
 
   constructor(private http: HttpClient) { }
 
