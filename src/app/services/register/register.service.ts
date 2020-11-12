@@ -1,13 +1,12 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { AuthUser } from 'src/app/models/authUser';
+import { user } from 'src/app/models/user';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class RegisterService {
 
   
   requestOptions = {
@@ -18,16 +17,25 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  login(authUser:AuthUser): any {
-    console.log('Request is sent!');
+  
+  register(): any {
+    console.log('Request is sent!register');
     // this.http is a HttpClient library provide by @angular/common
     // we are calling .get() method over this.http object
     // this .get() method takes URL to call API
-var data = {
-      "email": authUser.email,
-      "password": authUser.password
-  }
-  return this.http.post(environment.loginUrl, JSON.stringify(data), { ... this.requestOptions }).toPromise();
-}
+    var dataTrail={
 
+      "firstName":'try',
+      "LastName":"try",
+      "email":"mm@hotmail.com",
+      "password":"222",
+      "age":1,
+      "sex":"m",
+      "telNumber":"33333",
+      "dateOfBirth":'2020-11-11 10:35:28'
+    }
+   
+    return this.http.post(environment.addUSerUrl, JSON.stringify(dataTrail), { ... this.requestOptions }).toPromise();
+
+  }
 }

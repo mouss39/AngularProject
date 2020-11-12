@@ -12,6 +12,7 @@ import { PostItemComponent } from './components/postComponent/post-item/post-ite
 import { AuthService } from './services/auth/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { RegisterService } from './services/register/register.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { RouterModule } from '@angular/router';
     RouterModule,
 
   ],
-  providers: [PostsService, AuthService],
+  providers: [PostsService,RegisterService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
