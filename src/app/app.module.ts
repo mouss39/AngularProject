@@ -11,6 +11,7 @@ import { PostsService } from './services/posts/posts.service';
 import { PostItemComponent } from './components/postComponent/post-item/post-item.component';
 import { AuthService } from './services/auth/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
 
   ],
   providers: [PostsService, AuthService],
