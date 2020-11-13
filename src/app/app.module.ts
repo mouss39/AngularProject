@@ -13,6 +13,7 @@ import { AuthService } from './services/auth/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { RegisterService } from './services/register/register.service';
+import { ApiPageComponent } from './api-page/api-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RegisterService } from './services/register/register.service';
     LoginComponent,
     MainPageComponent,
     RegisterComponent,
-    PostItemComponent
+    PostItemComponent,
+    ApiPageComponent
   ],
   imports: [
     BrowserModule,

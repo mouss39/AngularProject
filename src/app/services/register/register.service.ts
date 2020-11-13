@@ -25,14 +25,13 @@ export class RegisterService {
     // this .get() method takes URL to call API
     var dataTrail={
 
-      "firstName":'try',
-      "LastName":"try",
-      "email":"mm@hotmail.com",
+      "firstName":"first",
+      "lastName":"last",
+      "email":"moh@hotmail.com",
       "password":"222",
       "age":1,
       "sex":"m",
       "telNumber":"33333",
-      "dateOfBirth":'2020-11-11 10:35:28'
     }
    
     return this.http.post(environment.addUSerUrl, JSON.stringify(dataTrail), { ... this.requestOptions }).toPromise();

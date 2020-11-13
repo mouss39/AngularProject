@@ -7,7 +7,7 @@ export class user{
     lastName:string;
     email:string;
     password: string;
-    telNumber:number;
+    telNumber:string;
     dateOfBirth:string;
     age:number;
     sex:string;

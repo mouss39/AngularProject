@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth/auth.service';
 import { Router } from '@angular/router';
+import { AuthenticatedUser } from '../models/authenticatedUser';
 
 @Component({
   selector: 'app-login',
@@ -28,6 +29,8 @@ export class LoginComponent implements OnInit {
         
         var user = response.body;
         if (user.email != null) {
+            console.log(user);
+          localStorage.setItem("currentUser", JSON.stringify(new AuthenticatedUser(user.email, user.firstName, user.lastName)));
           this.router.navigate(['main']);
         }
 

@@ -23,7 +23,10 @@ export class AuthService {
     // this.http is a HttpClient library provide by @angular/common
     // we are calling .get() method over this.http object
     // this .get() method takes URL to call API
-var data = {
+
+   
+    
+    var data = {
       "email": authUser.email,
       "password": authUser.password
   }

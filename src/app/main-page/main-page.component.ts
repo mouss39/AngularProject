@@ -22,14 +22,21 @@ export class MainPageComponent implements OnInit {
       this.posts=posts;
 
     });
-
+   
     //check this for passing values
     this.activatedRoute.params.subscribe(params => {
       this.user = params['email']; 
       console.log(user);
     });
+
+
+  
    
     
+  }
+  showApi():any{
+    this.router.navigate(['apiPage']);
+
   }
 
 }
