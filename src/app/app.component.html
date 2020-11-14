@@ -2,19 +2,19 @@
 <nav  class="toolbar" >
 
   <div class="registerMenu">
-      <ul>
+      <ul *ngIf="isAuthenticated()" >
         <li>
-            <a class="regular-btn" *ngIf="true" routerLink="/main"><span>Main</span></a>
+            <a class="regular-btn" *ngIf="isAuthenticated()" routerLink="/main"><span>Main</span></a>
         </li>
       </ul>
-      <ul>
+      <ul *ngIf="isAuthenticated()" >
         <li>
-          <a class="regular-btn" *ngIf="true" routerLink="/"><span>Logout</span></a>
+          <a class="regular-btn" *ngIf="isAuthenticated()" (click)="logout()" routerLink="/"><span>Logout</span></a>
         </li>
       </ul>
-      <ul>
+      <ul *ngIf="!isAuthenticated()">
         <li>
-          <a class="regular-btn" *ngIf="true" routerLink="/register"><span>Register</span></a>
+          <a class="regular-btn" *ngIf="!isAuthenticated()"routerLink="/register"><span>Register</span></a>
         </li>
       </ul>
 

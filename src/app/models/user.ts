@@ -8,7 +8,6 @@ export class user{
     email:string;
     password: string;
     telNumber:string;
-    dateOfBirth:string;
     age:number;
     sex:string;
 

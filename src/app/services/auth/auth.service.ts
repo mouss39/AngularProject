@@ -32,5 +32,16 @@ export class AuthService {
   }
   return this.http.post(environment.loginUrl, JSON.stringify(data), { ... this.requestOptions }).toPromise();
 }
+ isAuthenticated(): boolean {
+  var currentUser = localStorage.getItem('currentUser');
+  
+
+  if (currentUser != null) {
+   return true;
+  }
+  else {
+      return false;
+  }
+}
 
 }
