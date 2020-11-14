@@ -25,9 +25,9 @@ export class RegisterService {
     // this .get() method takes URL to call API
     var dataTrail={
 
-      "firstName":"first",
+      "firstName":"tryit",
       "lastName":"last",
-      "email":"moh@hotmail.com",
+      "email":"moh1245@hotmail.com",
       "password":"222",
       "age":1,
       "sex":"m",
