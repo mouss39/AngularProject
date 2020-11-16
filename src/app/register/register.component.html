@@ -7,50 +7,68 @@
         <form  [formGroup]="registrationForm" (ngSubmit)="register()"
         >
 
+
         <div class="padding"> 
+         
+        <input type="radio" formControlName="sex" id="male" name="sex" value="male">
+        <label  class="label" for="male">Male</label>
+        <input type="radio" formControlName="sex" id="female" name="sex" value="female">
+        <label  class="label" for="female">Female</label>
+        </div>
+
+        <div class="padding"> 
+
+          <b><label class="label">Name: </label></b>
         <input id="firstName" class="small-input1 input-border round-large padding"
         formControlName="firstName" type="text"  value="First Name"
          onfocus="if (this.value == 'First Name') {this.value = '';}"
           onblur="if (this.value == ''){this.value = 'First Name';} " />
 
+          <b><label class="label">Family name: </label></b>
        <input id="lastName" class="small-input1 input-border round-large padding"
        formControlName="lastName" type="text"  value="Last Name"
          onfocus="if (this.value == 'Last Name') {this.value = '';}"
           onblur="if (this.value == ''){this.value = 'Last Name';} " />
         </div>
+
         <div class="padding">
+
+          <b><label class="label">Email: </label></b>
          <input id="email" class="custom-input input-border round-large padding"
          formControlName="email" type="email"  value="Email"
          onfocus="if (this.value == 'Email') {this.value = '';}"
           onblur="if (this.value == ''){this.value = 'Email';} " />
         </div>
+
         <div class="padding">
-         <b><label class="label">Password</label></b>
+
+         <b><label class="label">Password:</label></b>
          <input id="password" class="small-input1 input-border round-large padding"
          formControlName="password" type="password"  
          />
 
-         <b><label class="label"> Confirm Password</label></b>
+         <b><label class="label"> Confirm Password:</label></b>
          <input id="confPassword" class="small-input1 input-border round-large padding"
          formControlName="confPassword" type="password" 
           />
         </div>
 
         <div class="padding">
+          <b><label class="label">Telephone: </label></b>
           <input id="telNumber" class="custom-input input-border round-large padding"  value="Telephone Number"
           formControlName="telNumber" type="tel" 
          onfocus="if (this.value == 'Telephone Number') {this.value = '';}" onblur="if (this.value == ''){this.value = 'Telephone Number';} " />
         </div>
         <div class="padding">
+
+          <b><label class="label">Age: </label></b>
          <input id="age" class="small-input1 input-border round-large padding"
-         formControlName="age" type="text"  value="Age"
+         formControlName="age" type="number"  value="Age"
          onfocus="if (this.value == 'Age') {this.value = '';}"
           onblur="if (this.value == ''){this.value = 'Age';} " />
+
         
-         <input id="sex" class="small-input1 input-border round-large padding"
-         formControlName="sex" type="text"  value="Sex"
-         onfocus="if (this.value == 'Sex') {this.value = '';}"
-          onblur="if (this.value == ''){this.value = 'Sex';} " />
+
         </div>
      </form>   
 

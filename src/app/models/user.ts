@@ -7,6 +7,7 @@ export class user{
     lastName:string;
     email:string;
     password: string;
+    confPassword: string;
     telNumber:string;
     age:number;
     sex:string;

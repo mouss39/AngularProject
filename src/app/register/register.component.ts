@@ -1,3 +1,4 @@
+import { identifierModuleUrl } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { user } from '../models/user';
@@ -30,15 +31,36 @@ export class RegisterComponent implements OnInit {
 
 
  public  register():any{
-    console.log("register");
-//TODO: fix the value issue by adding labels
-//TODO: add conditions for the input values
-  this.regUser=  this.registrationForm.getRawValue();
-      console.log(this.regUser.firstName)
-    // this.registerService.register().then(response=>{
+   //this function will be called once the user clicks the register button
 
-    //   console.log(response.body)
-    // })
+   // get all the values
+   this.regUser=  this.registrationForm.getRawValue();
+
+   // check if they meet the conditions 
+    if(this.regUser.password==""
+     || this.regUser.confPassword==""
+     || this.regUser.firstName==""
+     || this.regUser.lastName==""
+     || this.regUser.age==0
+     || this.regUser.telNumber==""
+     || this.regUser.email==""
+    ){
+      console.log("empty")
+    }
+    else if(this.regUser.password!=this.regUser.confPassword){
+      //I just did one of the conditions for simplicity but lot others can be added 
+      //here u can add all the conditions you need 
+
+      //TODO: notify about the wrong pass
+    }else{
+     //send them to the registration service in order to be stored in the database
+     console.log(this.regUser)
+      // this.registerService.register().then(response=>{
+  
+      //   console.log(response.body)
+      // })
+    }
+     
 
   }
 }
