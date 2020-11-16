@@ -13,6 +13,9 @@ export class ApiPageComponent implements OnInit {
   constructor(private postsService:  PostsService) { }
 
   ngOnInit(): void {
+    //call the api to get the posts
+    //get posts in the postsService
+    //will return an array of posts
     this.postsService.getPosts().subscribe(posts =>{
       this.posts=posts;
 

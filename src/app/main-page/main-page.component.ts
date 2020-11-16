@@ -14,27 +14,14 @@ export class MainPageComponent implements OnInit {
 
   posts:post[];
   user:string;
-  constructor(private activatedRoute: ActivatedRoute, private postsService:  PostsService,private router: Router) { 
+  constructor( private postsService:  PostsService,private router: Router) { 
   }
 
   ngOnInit(): void {
-    this.postsService.getPosts().subscribe(posts =>{
-      this.posts=posts;
-
-    });
    
-    //check this for passing values
-    this.activatedRoute.params.subscribe(params => {
-      this.user = params['email']; 
-      console.log(user);
-    });
-
-
-  
-   
-    
   }
   showApi():any{
+    // go to the api page to call apis
     this.router.navigate(['apiPage']);
 
   }

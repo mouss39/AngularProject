@@ -19,13 +19,9 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(authUser:AuthUser): any {
-    console.log('Request is sent!');
     // this.http is a HttpClient library provide by @angular/common
     // we are calling .get() method over this.http object
     // this .get() method takes URL to call API
-
-   
-    
     var data = {
       "email": authUser.email,
       "password": authUser.password
@@ -34,8 +30,6 @@ export class AuthService {
 }
  isAuthenticated(): boolean {
   var currentUser = localStorage.getItem('currentUser');
-  
-
   if (currentUser != null) {
    return true;
   }

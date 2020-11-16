@@ -19,23 +19,9 @@ export class RegisterService {
 
   
   register(regUser: user): any {
+   //here were we call the backend in order to add a user into the database through and api call
+   //the user is passed by the method
 
-    
-    console.log('Request is sent!register');
-    // this.http is a HttpClient library provide by @angular/common
-    // we are calling .get() method over this.http object
-    // this .get() method takes URL to call API
-    var dataTrail={
-
-      "firstName":"tryit",
-      "lastName":"last",
-      "email":"moh1245@hotmail.com",
-      "password":"222",
-      "age":1,
-      "sex":"m",
-      "telNumber":"33333",
-    }
-   
     return this.http.post(environment.addUSerUrl, JSON.stringify(regUser), { ... this.requestOptions }).toPromise();
 
   }

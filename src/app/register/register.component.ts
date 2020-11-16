@@ -2,6 +2,7 @@ import { identifierModuleUrl } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthenticatedUser } from '../models/authenticatedUser';
 import { user } from '../models/user';
 import { RegisterService } from '../services/register/register.service';
 
@@ -69,6 +70,7 @@ export class RegisterComponent implements OnInit {
      //send them to the registration service in order to be stored in the database
      console.log(this.regUser)
       this.registerService.register(this.regUser).then(response=>{
+        localStorage.setItem("currentUser", JSON.stringify(new AuthenticatedUser(this.regUser.email, this.regUser.firstName, this.regUser.lastName)));
         this.router.navigate(['main']);
       }).catch(this.handleError);
     }
