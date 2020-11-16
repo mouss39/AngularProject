@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     
     this.authService.login(this.loginForm.getRawValue())
       .then(response => {
-        
+     
         var user = response.body;
         if (user.email != null) {
             console.log(user);

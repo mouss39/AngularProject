@@ -1,6 +1,7 @@
 import { identifierModuleUrl } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { user } from '../models/user';
 import { RegisterService } from '../services/register/register.service';
 
@@ -11,9 +12,12 @@ import { RegisterService } from '../services/register/register.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private fb: FormBuilder,private registerService: RegisterService) { }
+  constructor(private fb: FormBuilder,private registerService: RegisterService, private router: Router) {
+    this.handleError = this.handleError.bind(this);
+   }
   registrationForm: FormGroup;
   regUser: user;
+  errorMessage = "";
   ngOnInit(): void {
 
     this.registrationForm = this.fb.group({
@@ -29,6 +33,15 @@ export class RegisterComponent implements OnInit {
     );
   }
 
+  private handleError(error: any): Promise<any> {
+    
+    //TODO: conflict error message
+    switch (error.status) {
+      case 200:;
+      case 409: console.log("Conflict ");break;
+    }
+    return Promise.resolve(error.message || error);
+  }
 
  public  register():any{
    //this function will be called once the user clicks the register button
@@ -56,10 +69,10 @@ export class RegisterComponent implements OnInit {
      //send them to the registration service in order to be stored in the database
      console.log(this.regUser)
       this.registerService.register(this.regUser).then(response=>{
-  
-        console.log(response.body)
-      })
+        this.router.navigate(['main']);
+      }).catch(this.handleError);
     }
+   
      
 
   }
