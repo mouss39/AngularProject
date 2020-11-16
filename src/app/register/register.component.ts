@@ -45,20 +45,20 @@ export class RegisterComponent implements OnInit {
      || this.regUser.telNumber==""
      || this.regUser.email==""
     ){
-      console.log("empty")
+    //TODO: notify about something empty
     }
     else if(this.regUser.password!=this.regUser.confPassword){
       //I just did one of the conditions for simplicity but lot others can be added 
       //here u can add all the conditions you need 
-
+      
       //TODO: notify about the wrong pass
     }else{
      //send them to the registration service in order to be stored in the database
      console.log(this.regUser)
-      // this.registerService.register().then(response=>{
+      this.registerService.register(this.regUser).then(response=>{
   
-      //   console.log(response.body)
-      // })
+        console.log(response.body)
+      })
     }
      
 

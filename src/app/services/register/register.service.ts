@@ -18,7 +18,9 @@ export class RegisterService {
   constructor(private http: HttpClient) { }
 
   
-  register(): any {
+  register(regUser: user): any {
+
+    
     console.log('Request is sent!register');
     // this.http is a HttpClient library provide by @angular/common
     // we are calling .get() method over this.http object
@@ -34,7 +36,7 @@ export class RegisterService {
       "telNumber":"33333",
     }
    
-    return this.http.post(environment.addUSerUrl, JSON.stringify(dataTrail), { ... this.requestOptions }).toPromise();
+    return this.http.post(environment.addUSerUrl, JSON.stringify(regUser), { ... this.requestOptions }).toPromise();
 
   }
 }
