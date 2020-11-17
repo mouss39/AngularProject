@@ -112,7 +112,8 @@ p {
 .registerMenu il{
     list-style: none;
     margin: 0 50px;
-    color: darkcyan;
+    color: #d4f4f5;
+   
 }
 .paddingDown{
 
@@ -131,7 +132,8 @@ p {
     display: flex;
     align-items: center;
     background-color:  #93ebee;
-    color: white;
+ 
+    color:  #93ebee;
     font-weight: 600;
   }
   .content {
