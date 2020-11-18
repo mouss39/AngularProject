@@ -14,6 +14,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { RegisterService } from './services/register/register.service';
 import { ApiPageComponent } from './api-page/api-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { ApiPageComponent } from './api-page/api-page.component';
     MainPageComponent,
     RegisterComponent,
     PostItemComponent,
-    ApiPageComponent
+    ApiPageComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +35,8 @@ import { ApiPageComponent } from './api-page/api-page.component';
     ReactiveFormsModule,
     FormsModule,
     RouterModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
 
   ],
   providers: [PostsService,RegisterService, AuthService],

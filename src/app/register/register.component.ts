@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { AuthenticatedUser } from '../models/authenticatedUser';
 import { user } from '../models/user';
 import { RegisterService } from '../services/register/register.service';
+import {MatDialog} from '@angular/material/dialog';
+import { DialogComponent } from '../components/dialog/dialog.component';
 
 @Component({
   selector: 'app-register',
@@ -13,12 +15,14 @@ import { RegisterService } from '../services/register/register.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private fb: FormBuilder,private registerService: RegisterService, private router: Router) {
+  constructor(private fb: FormBuilder,
+    private registerService: RegisterService,
+     private router: Router,
+     public dialog: MatDialog) {
     this.handleError = this.handleError.bind(this);
    }
   registrationForm: FormGroup;
   regUser: user;
-  errorMessage = "";
   ngOnInit(): void {
 
     this.registrationForm = this.fb.group({
@@ -36,10 +40,10 @@ export class RegisterComponent implements OnInit {
 
   private handleError(error: any): Promise<any> {
     
-    //TODO: conflict error message
+    //in case it returned 409 then there is already an existing email.
     switch (error.status) {
       case 200:;
-      case 409: console.log("Conflict ");break;
+      case 409: this.dialog.open(DialogComponent,{data: {dataType:"conflict"}}); break;
     }
     return Promise.resolve(error.message || error);
   }
@@ -59,13 +63,13 @@ export class RegisterComponent implements OnInit {
      || this.regUser.telNumber==""
      || this.regUser.email==""
     ){
-    //TODO: notify about something empty
+      this.dialog.open(DialogComponent,{data: {dataType:"emptyValue"}});
     }
     else if(this.regUser.password!=this.regUser.confPassword){
       //I just did one of the conditions for simplicity but lot others can be added 
       //here u can add all the conditions you need 
       
-      //TODO: notify about the wrong pass
+      this.dialog.open(DialogComponent,{data: {dataType:"differentPass"}});
     }else{
      //send them to the registration service in order to be stored in the database
      console.log(this.regUser)

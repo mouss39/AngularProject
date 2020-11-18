@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth/auth.service';
 import { Router } from '@angular/router';
 import { AuthenticatedUser } from '../models/authenticatedUser';
+import {MatDialog} from '@angular/material/dialog';
+import { DialogComponent } from '../components/dialog/dialog.component';
 
 @Component({
   selector: 'app-login',
@@ -11,8 +13,17 @@ import { AuthenticatedUser } from '../models/authenticatedUser';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private fb: FormBuilder,private authService: AuthService, private router: Router) { }
+  constructor(private fb: FormBuilder,
+    private authService: AuthService,
+     private router: Router,
+     public dialog: MatDialog) { 
+      this.handleError = this.handleError.bind(this);
+     }
+
+
   loginForm: FormGroup;
+
+
   ngOnInit(): void {
     //login form to get the values in the login
     this.loginForm = this.fb.group({
@@ -20,6 +31,16 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required]]
     }
     );
+  }
+
+  private handleError(error: any): Promise<any> {
+    
+    //in case it returned 409 then there is already an existing email.
+    switch (error.status) {
+      case 200:;
+      case 401: this.dialog.open(DialogComponent,{data: {dataType:"wrongEmailOrPass"}}); break;
+    }
+    return Promise.resolve(error.message || error);
   }
 
 
@@ -37,10 +58,9 @@ export class LoginComponent implements OnInit {
           localStorage.setItem("currentUser", JSON.stringify(new AuthenticatedUser(user.email, user.firstName, user.lastName)));
           this.router.navigate(['main']);
         }
-
       
         
-  });
+  }).catch(this.handleError);
 
 }
 }
