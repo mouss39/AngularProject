@@ -18,6 +18,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ProfileComponent } from './profile/profile.component';
+import { UserProfileComponent } from './profileComponents/userProfile/user-profile/user-profile.component';
+import { ChangePasswordComponent } from './profileComponents/changePass/change-password/change-password.component';
+import { ChangeNameComponent } from './profileComponents/change-name/change-name.component';
+import { ChangeTelNumberComponent } from './profileComponents/change-tel-number/change-tel-number.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,10 @@ import { ProfileComponent } from './profile/profile.component';
     ApiPageComponent,
     DialogComponent,
     ProfileComponent,
+    UserProfileComponent,
+    ChangePasswordComponent,
+    ChangeNameComponent,
+    ChangeTelNumberComponent,
   ],
   imports: [
     BrowserModule,

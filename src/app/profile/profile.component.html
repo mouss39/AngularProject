@@ -14,10 +14,16 @@
 </div>
 <div class="profileBody">
     <a  *ngIf="changePassB">
-        <h1 >there</h1>
+        <app-user-profile></app-user-profile>
     </a>
 <a *ngIf="showProfileB">
-    <h1  >profile</h1>
+    <app-change-password></app-change-password>
+</a>
+<a *ngIf="changeTelB">
+    <app-change-tel-number></app-change-tel-number>
+</a>
+<a *ngIf="changeNameB">
+    <app-change-name></app-change-name>
 </a>
 
 
