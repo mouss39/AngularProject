@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { ApiPageComponent } from './api-page/api-page.component';
 import { LoginComponent } from './login/login.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   { path: 'main', component: MainPageComponent  },
   { path: 'register', component: RegisterComponent  },
   { path: 'apiPage', component: ApiPageComponent  },
+  { path: 'profile', component: ProfileComponent  },
   { path: '', component: LoginComponent },
  ];
 

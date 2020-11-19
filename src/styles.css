@@ -186,18 +186,21 @@ p {
 .regular-btn{
 
 position: absolute;
+color:rgb(24, 70, 73);
 text-decoration: none;
-border: 2px solid transparent;
+
+border: 2px solid white;
 border-radius: 20px;
-background-image: linear-gradient( #93ebee #93ebee),
- radial-gradient(circle at top left, white, white);
+text-shadow: white;
 background-origin: border-box;
 background-clip: content-box,border-box;
 }
 
 .regular-btn span{
     display: block;
-    padding:8px 22px;
+    padding:1px 22px;
 }
+
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -17,6 +17,7 @@ import { ApiPageComponent } from './api-page/api-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     PostItemComponent,
     ApiPageComponent,
     DialogComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

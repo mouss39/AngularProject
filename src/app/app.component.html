@@ -7,6 +7,11 @@
             <a class="regular-btn" *ngIf="isAuthenticated()" routerLink="/main"><span>Main</span></a>
         </li>
       </ul>
+      <ul *ngIf="isAuthenticated()" >
+        <li>
+            <a class="regular-btn" *ngIf="isAuthenticated()" routerLink="/profile"><span>Profile</span></a>
+        </li>
+      </ul>
       
       <ul *ngIf="isAuthenticated()" >
         <li>

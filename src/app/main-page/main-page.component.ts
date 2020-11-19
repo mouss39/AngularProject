@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { post } from '../models/post';
-import { user } from '../models/user';
+import { Router } from '@angular/router';
+
+import { AuthenticatedUser } from '../models/authenticatedUser';
+
 import { PostsService } from '../services/posts/posts.service';
 
 @Component({
@@ -12,13 +12,14 @@ import { PostsService } from '../services/posts/posts.service';
 })
 export class MainPageComponent implements OnInit {
 
-  posts:post[];
-  user:string;
+  authUser: AuthenticatedUser;
   constructor( private postsService:  PostsService,private router: Router) { 
   }
 
   ngOnInit(): void {
+   this.authUser=JSON.parse(localStorage.getItem("currentUser"));
    
+
   }
   showApi():any{
     // go to the api page to call apis
