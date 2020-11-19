@@ -1,0 +1,36 @@
+.profileNav{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    float: left;
+    width: 20%;
+    border-right: 3px solid rgb(134, 133, 133);
+    border-bottom: 3px solid rgb(134, 133, 133);
+   
+
+    
+
+}
+.profileBody{
+float: left;
+
+}
+button{
+    padding-left: 20px;
+    background-color: transparent;
+    border: transparent;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  } 
+
+.profile{
+
+    padding-top: 10px;
+}
