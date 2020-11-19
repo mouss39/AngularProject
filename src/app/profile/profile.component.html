@@ -13,10 +13,10 @@
 
 </div>
 <div class="profileBody">
-    <a  *ngIf="changePassB">
+    <a  *ngIf="showProfileB">
         <app-user-profile></app-user-profile>
     </a>
-<a *ngIf="showProfileB">
+<a *ngIf="changePassB">
     <app-change-password></app-change-password>
 </a>
 <a *ngIf="changeTelB">

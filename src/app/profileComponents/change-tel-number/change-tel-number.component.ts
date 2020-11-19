@@ -10,6 +10,7 @@ export class ChangeTelNumberComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
+  
 
+}
 }

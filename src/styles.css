@@ -8,6 +8,11 @@ background-color: #d4f4f5;
 padding-top: 50px;
 padding-bottom: 50px;
 }
+.settingsComponent{
+  border: 2px solid white;
+  background-color:white;
+
+}
 .backGroundColor{
     width: max-content;
     height: max-content;
@@ -23,7 +28,12 @@ align-items: center;
 }
 .paddingRight{
     padding-right: 20px;
-    padding-right: 20px;
+}
+.paddingLeft{
+  padding-left: 20px;
+}
+.labelBesideInput{
+  display: inline-block;
 }
 .customButton{
     align-items: center;
@@ -36,6 +46,17 @@ align-items: center;
     display: inline-block;
     font-size: 16px;
 }
+.customSettingsButton{
+  align-items: center;
+  background-color: #99f2f5; /* Green */
+  border: 1px;
+  color: white;
+  padding: 15px 32px ;
+  
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
 .custom-input{
     padding:10px;
     
@@ -46,6 +67,16 @@ align-items: center;
     color: turquoise;
     border-bottom:1px solid #ccc;
     width:90%}
+    
+    .custom-input-inline{
+      padding:10px;
+      display: inline-block;
+      background-color: #d4f4f5;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: large;
+      color: rgb(66, 126, 120);
+      border-bottom:1px solid rgb(19, 192, 223);
+      width:50%}
 
 .small-input1{
         padding:10px;

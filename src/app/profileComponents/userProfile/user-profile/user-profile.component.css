@@ -1,0 +1,11 @@
+.custom--email-input-inline{
+
+    padding:10px;
+    display: inline-block;
+    background-color: #d4f4f5;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    color: rgb(66, 126, 120);
+    border-bottom:1px solid rgb(19, 192, 223);
+    width:60%
+}
