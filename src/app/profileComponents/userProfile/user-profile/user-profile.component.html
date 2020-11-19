@@ -5,26 +5,26 @@
 
     <div class="labelBesideInput paddingLeft padding">
         <label class="label">First Name</label>
-        <input type="password" class="custom-input-inline input-border round-large"readonly>
+        <input type="text" value="{{currentUser.firstName}}" class="custom-input-inline input-border round-large"readonly>
     </div>
     <div class="labelBesideInput paddingLeft">
         <label class="label">Last Name</label>
-        <input type="email" class="custom-input-inline input-border round-large" readonly>
+        <input type="text" value="{{currentUser.lastName}}" class="custom-input-inline input-border round-large" readonly>
     </div>
    
     <div class="labelBesideInput paddingLeft padding">
         <label class="label">Email</label>
-        <input type="password" class="custom--email-input-inline input-border round-large"readonly>
+        <input type="email" value="{{currentUser.email}}"class="custom--email-input-inline input-border round-large"readonly>
     </div><br>
     
     <div class="labelBesideInput paddingLeft padding">
         <label class="label">Phone Number</label>
-        <input type="password" class="custom-input-inline input-border round-large"readonly>
+        <input type="text"value="{{currentUser.telNumber}}" class="custom-input-inline input-border round-large"readonly>
     </div>
     
     <div class="labelBesideInput paddingLeft padding">
         <label class="label">Age</label>
-        <input type="password" class="custom-input-inline input-border round-large"readonly>
+        <input type="number" value="{{currentUser.age}}"class="custom-input-inline input-border round-large"readonly>
     </div><br>
 
 

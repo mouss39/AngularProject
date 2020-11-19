@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticatedUser } from 'src/app/models/authenticatedUser';
 
 @Component({
   selector: 'app-user-profile',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-
+  currentUser:AuthenticatedUser;
   constructor() { }
 
   ngOnInit(): void {
+
+    this.currentUser=JSON.parse(localStorage.getItem("currentUser"));
+   
+   
   }
 
 }

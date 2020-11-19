@@ -74,7 +74,8 @@ export class RegisterComponent implements OnInit {
      //send them to the registration service in order to be stored in the database
      console.log(this.regUser)
       this.registerService.register(this.regUser).then(response=>{
-        localStorage.setItem("currentUser", JSON.stringify(new AuthenticatedUser(this.regUser.email, this.regUser.firstName, this.regUser.lastName)));
+        localStorage.setItem("currentUser", JSON.stringify(
+          new AuthenticatedUser(this.regUser.email, this.regUser.firstName, this.regUser.lastName,this.regUser.telNumber,this.regUser.age)));
         this.router.navigate(['main']);
       }).catch(this.handleError);
     }

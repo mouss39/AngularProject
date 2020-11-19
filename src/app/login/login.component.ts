@@ -55,7 +55,8 @@ export class LoginComponent implements OnInit {
         var user = response.body;
         if (user.email != null) {
           //save the user into the local storage in order to be used later in the pages
-          localStorage.setItem("currentUser", JSON.stringify(new AuthenticatedUser(user.email, user.firstName, user.lastName)));
+          localStorage.setItem("currentUser", JSON.stringify(
+            new AuthenticatedUser(user.email, user.firstName, user.lastName,user.telNumber,user.age)));
           this.router.navigate(['main']);
         }
       
