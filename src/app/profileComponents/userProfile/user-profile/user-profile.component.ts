@@ -11,7 +11,7 @@ export class UserProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
+    //this will get info of the current user
     this.currentUser=JSON.parse(localStorage.getItem("currentUser"));
    
    

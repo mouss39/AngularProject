@@ -6,6 +6,8 @@ export const environment = {
   production: false,
   loginUrl : 'http://localhost:8088/auth/login',
   addUSerUrl:'http://localhost:8088/users/addUser',
+  updateTelNumber:'http://localhost:8088/users/updateTelNumber',
+
   headers:{
     'Content-Type': 'application/json',
     'Accept': 'application/json',
